@@ -1,0 +1,90 @@
+<html>
+    <head><title>JS Objects</title></head>
+    <body>
+        <h1> Creating Javascript Objects</h1>
+        <p id="demo"></p>
+        <!-- <script>
+            var student ={
+                name:"Swostika",
+                age:21,
+                student:"Electronics",
+            };
+            document.getElementById("demo").innerHTML = student.name + " of the age " +student.age +"studeies " + student.student+".";
+        </script> -->
+        <!-- <script>
+            var students = new object();
+            student.name="Swostika",
+            student.age=21;
+            student.studies = "Computer";
+            document.getElementById("demo").innerHTML = student.name + " of the age " +student.age +"studies " + student.studies+".";
+
+        </script> -->
+        <!-- <script>
+            function stud(name,age,studies){
+                this.name = name;
+                this.age = age;
+                this.studies = studies;
+            };
+            var student = stud("Subina",22,"Electronics");
+            document.getElementById("demo").innerHTML = student.name + " of the age " + student.age +"studies " + student.studies+".";
+
+        </script> -->
+        <!-- <script>
+            var student ={
+                name:"swostika",
+                age:"21",
+                studies:"Electronics",
+            };
+            x= "age"
+            document.getElementById("demo").innerHTML = student.name + " of the age " + student[x]+"studies " + student.studies+".";
+
+        </script> -->
+
+        <!-- <button id = "click me"> Click me</button>
+        <script>
+            let user = {
+                name:"Swostika",
+                age :21,
+
+            };
+            function sayHi(){
+                alert("Hello");
+            }
+            user.message = sayHi;
+            document.getElementById("demo").innerHTML = "Hi! " + user.name;
+            document.getElementById("click me").onClick = user.message;
+
+        </script> -->
+
+        <script>
+            var car = {
+                mode1:"BMW 320d",
+                color:"Navy Blue",
+                fuel_type:"Diesel",
+                get fuel(){
+                    return this.fuel_type
+                },
+            };
+            document.getElementById("demo").innerHTML = car.fuel;
+
+        </script>
+
+
+<script>
+    var car = {
+        model: "Audi A4",
+        color:"Black",
+        fuel_type: "",
+        set fuel(fuel){
+            this.fuel_type = fuel;
+        }
+    }
+    car.fuel = "Petrol";
+    document.getElementById("demo").innerHTML = car.fuel_type;
+
+
+</script>
+
+
+    </body>
+</html>
