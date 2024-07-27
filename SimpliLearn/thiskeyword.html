@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <h1> This keyword</h1>
+    </head>
+    <body>
+        <!-- <script>
+            var value = 50
+
+            function My_function(){
+                var value = 100
+                alert("Value:"+ value)
+                alert("This value:"+this.value)
+            }
+            My_function()
+        </script> -->
+
+        <script>
+            const random = {
+                name:"Tutorial",
+                video:["JavaScript", "this", "keyword"],
+                info(){
+                    this.video.forEach(function(tag){
+                        console.log(this.name, tag)
+                    },this)
+                }
+            }
+            random.info()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head><title>Javascript closure</title>
+    <p id="demo"></p></head>
+    <body>
+        <!-- <script>
+            let a =10;
+            function Myfun(){
+                let b= 20
+                document.write(a+b)
+            }
+            Myfun()
+        </script> -->
+
+        <script>
+            var a=10
+            function Firstfun(){
+                var b = 20;
+                function Secondfun(){
+                    var c =a+b
+                    return c
+                }
+                return Secondfun();
+            }
+                var sum = Firstfun()
+                document.write("The sum is " + sum + '<br>'
+        )
+        </script>
+    </body>
+</html>

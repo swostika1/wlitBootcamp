@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>
+            JavaScript promises
+        </title>
+        <p id="demo">
+        </p>
+    </head>
+    <body>
+        <!-- <script>
+            let car = new Promise(function(resolve , reject)
+        {
+            fuel_fullTank  = false;
+            if(fuel_fullTank){
+                resolve()
+            }
+            else{
+                reject()
+            }
+        });
+        car.then(function(){
+            document.write("The fuel tank is full. ")
+        }).catch(function(){
+            document.write("The fuel tank is empty.")
+        })
+        </script> -->
+
+
+        <script>
+            let empty_tank =function(){
+                return new Promise(function(resolve,reject){
+                    resolve("The car doesn't have enough fuel.")
+                })
+            }
+            let engine =function(msg){
+                return new Promise(function(resolve,reject){
+                    resolve(msg+"The engine is over heating.")
+                })
+            }
+            let travel =function(msg){
+                return new Promise(function(resolve,reject){
+                    resolve(msg+"The car is not safe for travelling.")
+                })
+            }
+            empty_tank().then(function(result){
+                return engine()
+
+            }).then(function(result){
+                return travel()
+            }).then(function(result){
+                console.log("Done" + result)
+            })
+
+        </script>
+    </body>
+</html>
